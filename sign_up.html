@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User SignUp</title>
+  <script>
+    function validateEmail() {
+      var email = document.getElementById("email").value;
+      var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        document.getElementById("email").focus();
+        return false;
+      }
+      
+      var cnic = document.getElementById("cnic").value;
+      var re = /^[0-9]{5}-[0-9]{7}-[0-9]$/;
+      
+      if (!re.test(cnic)) {
+        alert("Please enter a valid CNIC in the format #####-#######-#.");
+        document.getElementById("cnic").focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>User SignUp</h2>
+  <div class="container">
+    <form action="patient-registration.php" method="POST" onsubmit="return validateEmail();">
+      <div class="Login">
+        <label for="usertype">User Type:</label>
+        <select id="usertype" name="usertype" required>
+          <option value="admin">Admin</option>
+          <option value="doctor">Doctor</option>
+          <option value="patient">Patient</option>
+        </select>
+        <div class="form-group">
+            <label for="Username">Username:</label>
+            <input type="text" id="Username" name="Username" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="cnic">CNIC:</label>
+            <input type="text" id="cnic" name="cnic" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+          </div>
+          <div class="form-group">
+            <label for="bloodType">Blood Type:</label>
+            <input type="text" id="bloodType" name="bloodType" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </div>
+      <div class="form-group">
+        <label for="terms">I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>:</label>
+        <input type="checkbox" id="terms" name="terms" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

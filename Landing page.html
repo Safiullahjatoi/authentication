@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Management System</title>
+  <style>
+    html {
+      height: 100%;
+      background-image: url('C:/Users/Winsoft Computers/Desktop/FAST-Web Engineering/Project Work/HMS Image .jpg ');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 1;
+
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .header {
+      background-color: #072E33;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+    }
+    .child1 {
+      display: flex;
+    }
+    .header .child2{
+      display: flex;
+    }
+    .login-button {
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .login-button:hover {
+      background-color: #294D61;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      background-color: #072E33;
+      margin-top: 10%;
+      
+    }
+    .dropdown-content a:hover {
+      background-color: #294D61;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .SignUp{
+      padding: 10px 20px;
+      background-color: white;
+      margin: 10px ;
+      color: black;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+
+    }
+    .SignUp:hover{
+      background-color:#294D61;
+    }
+    .container {
+      flex-grow: 1;
+      max-width: 800px;
+      margin: auto;
+      padding: 0px 50px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-section {
+      width: 100%;
+      height: auto;
+      margin-top: 0px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+
+    }
+    .intro{
+      line-height: 1.2;
+      font-size: 22px;
+    }
+
+    .cta-section h2 {
+      margin-top: 30px;
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .features-section {
+      display: block;
+    }
+
+    .features-section h3 {
+      font-size: 30px;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .features-section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 50%;
+    }
+
+    .features-section ul li {
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    .footer {
+      background-color: #072E33;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .image1 {
+      width: 100px;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="child1">
+      <img src="Blue_Dental_Clinic_Logo-removebg-preview (7).png" class="image1" alt="Image">
+      <h1>Hospital Management System</h1>
+    </div>
+    <div class="child2">
+      <div class="dropdown">
+        <a href="#" class="login-button">Login</a>
+        <div class="dropdown-content">
+          <a href="Admin_Login.html">Admin</a>
+          <a href="Doctor_Login.html">Doctor</a>
+          <a href="Patient_Login.html">Patient</a>  
+        </div>
+      </div>
+      <div>
+        <a href="sign_up.html" class="SignUp"> SignUp</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cta-section">
+      <h2>Welcome Back to HMS!</h2>
+      <p class="intro">
+        Welcome to our Hospital Management System! We are delighted to introduce you to our cutting-edge platform
+        designed to streamline and enhance the healthcare experience for both patients and medical professionals. Our
+        comprehensive system offers a wide array of features, from seamless appointment scheduling and efficient patient
+        registration to robust electronic health records management. With our user-friendly interface and secure data
+        storage, you can rest assured that your sensitive information is in safe hands. Our goal is to optimize hospital
+        operations, improve patient care, and foster better communication among healthcare providers. Whether you are a
+        patient seeking quality healthcare or a healthcare professional aiming to deliver exceptional services, our
+        Hospital Management System is here to support you every step of the way. Thank you for choosing us as your
+        healthcare technology partner!</p>
+    </div>
+    <div class="features-section">
+      <h3>Key Features</h3>
+      <li>Efficient hospital administration and management</li>
+      <li>Streamlined appointment scheduling and management</li>
+      <li>Access to patient medical records and prescription details</li>
+      <li>Inventory and pharmacy management</li>
+      <li>Financial management and accounting</li>
+      <li>Easy communication and collaboration among staff members</li>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; 2023 Hospital Management System by Safiullah Jatoi. All rights reserved.</p>
+  </div>
+</body>
+
+</html>
